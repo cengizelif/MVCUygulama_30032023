@@ -1,0 +1,45 @@
+﻿@using MVCUygulama_30032023.Library
+@{
+    ViewBag.Title = "Index3";
+}
+
+
+<h2>Ana Sayfa</h2>
+
+İsim giriniz:<input type="text" name="deger1" value="" />
+<br />
+Yaşınızı giriniz:<input type="number" name="deger2" value="" />
+<br />
+  <input type="button" name="btn1" value="Kaydet" id="xx" />
+<br />
+<hr />
+  <a href="/Home/Index2">Index2ye git</a>
+<hr />
+
+<a href=@Url.Action("Index")>Index1e git</a>
+<hr />
+@Url.Encode("/Home/Index2/deger=merhaba dünya")
+<br />
+@HttpUtility.HtmlEncode("<button>Reset</button>")
+<br />
+@HttpUtility.HtmlDecode("&lt;button&gt;Reset&lt;/button&gt;")
+@Html.Raw("<b>ELif</b>")
+@Html.Raw("<script 'type=text/javascript'>alert('merhaba')</script>")
+
+<hr />
+
+<button class="btn btn-success" type="reset">Reset</button>
+
+@Html.ActionLink("Indexe git", "Index", new {isim="elif",soyisim="cengiz"})
+@Html.TextBox("text2","deneme")
+@*@Html.Button(text:"Gönder")
+@Html.Button(text:"Kaydet",typ:ButonTip.submit)
+@Html.Button(text:"Onay",id:"btn1",typ:ButonTip.reset)*@
+
+@Html.Button("","Gönder","",ButonTip.submit)
+@Html.Button("Kaydet","","","btn btn-success",ButonTip.submit)
+<br /><br />
+
+@Html.TextArea("text3","ÖnYazı",10,30,null)
+
+@Html.Action("Index2")

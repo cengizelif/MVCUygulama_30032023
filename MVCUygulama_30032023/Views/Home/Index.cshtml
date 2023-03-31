@@ -1,0 +1,71 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ana Sayfa</title>
+</head>
+<body>
+    <div>
+        <p>Consectetur adipiscing elit fusce vel.</p>
+        <ul>
+            <li>
+                <p>Consectetur adipiscing elit fusce vel.</p>
+            </li>
+        </ul>
+
+        @*ul>li.item$*5*@
+        <ul>
+            <li class="item1"></li>
+            <li class="item2"></li>
+            <li class="item3"></li>
+            <li class="item4"></li>
+            <li class="item5"></li>
+        </ul>
+
+        <input type="text" value="deneme" id="text1" class="item1" />
+
+        <a href="">Tincidunt integer </a>
+
+        @*ul>li#x$*3*@
+        <ul>
+            <li id="x1"></li>
+            <li id="x2"></li>
+            <li id="x3"></li>
+        </ul>
+
+        @*(ul>li>p>lorem)+(ul>li*3)+hr*@
+        <ul>
+            <li>
+                <p>Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+            </li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        @*div#div1>h2>lorem3*@
+        <div id="div1">
+            <h2>Sit amet, consectetur.</h2>
+        </div>
+        <input type="number" value="" id="" />
+
+        @*html:5*@
+
+        @*h$[title=item$]{Header $}*3*@
+        <h1 title="item1">Header 1</h1>
+        <h2 title="item2">Header 2</h2>
+        <h3 title="item3">Header 3</h3>
+
+        @*[]:Attribute
+        {}:içerik*@
+    </div>
+</body>
+</html>

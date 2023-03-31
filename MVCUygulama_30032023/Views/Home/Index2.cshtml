@@ -1,0 +1,71 @@
+﻿
+@{
+    Layout = null;
+}
+
+@{ 
+    string isim = "Elif";
+    string soyisim = "Cengiz";
+    string adsoyad = isim + " " + soyisim;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <div>
+        <b> @isim </b>
+        <br />
+        <b> @soyisim </b>
+        <br />
+        <b> @adsoyad </b>
+        <br />
+        <b> @(isim+soyisim) </b>
+    </div>
+    <div>
+        @{
+            string deger = "123";
+
+            <b>@deger</b>
+
+            string[] isimler = new string[] { "Büşra", "Esma", "Özgür" };
+            int index = 0;
+
+            <ul>
+                @foreach (var item in isimler)
+                {
+                    <li>
+                        @if (index % 2 == 0)
+                        {
+                            <b> @item</b>
+                        }
+                        else
+                        {
+                            <i>@item</i>
+                        }
+                    </li>
+                    index++;
+                }
+            </ul>
+
+        }
+    </div>
+
+    <hr />
+    @for (int i = 1; i < 11; i++)
+    {
+        @("Sayı:"+i)
+        <br />
+    }
+    @for (int i = 1; i < 11; i++)
+    {
+
+        <b>Sayı:@i</b>
+    }
+
+</body>
+</html>
